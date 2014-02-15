@@ -1,12 +1,15 @@
-#
-# shkd configuration
-#
+# Mute
+kpenter
+	amixer set PCM 1+ toggle
 
-# brightnessup
-#     foo +1
+# Kill all sound playing processes
+kp0
+	pkill mplayer
 
-# volumedown
-#     bar -1
+# 6music
+kp6
+	flock -o -n /tmp -c "mplayer 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_intl_lc_6music_p?s=1387079019&e=1387093419&h=7858d8db4e687f999422d058cae23681'"
 
-# meta + alt + shift + ctrl + zenkakuhankaku
-#     baz --quux /foo/bar
+# Play MP3
+kp1
+	flock -o -n /tmp -c "mplayer /root/01.LOVE.mp3"

@@ -2,14 +2,15 @@ VERSION = 0.1
 
 CC      = gcc
 LIBS    = -lm
-CFLAGS  = -std=c99 -pedantic -Wall -Wextra -DVERSION=\"$(VERSION)\"
-LDFLAGS = $(LIBS)
+CFLAGS  = -std=c99 -pedantic -Wall -Wextra -DVERSION=\"$(VERSION)\" -static
+LDFLAGS = $(LIBS) -static
 
 PREFIX    ?= /usr/local
 BINPREFIX = $(PREFIX)/bin
 MANPREFIX = $(PREFIX)/share/man
 SYSDPREFIX = /usr/lib/systemd/system
-INPUT_DEVICE = $(shell find /dev/input/by-{id,path} -name '*-kbd' | head -n 1)
+#INPUT_DEVICE = $(shell find /dev/input/by-{id,path} -name '*-kbd' | head -n 1)
+INPUT_DEVICE = /dev/input/by-id/usb-13ba_0001-event-kbd
 
 SRC = shkd.c keycodes.c helpers.c
 OBJ = $(SRC:.c=.o)
