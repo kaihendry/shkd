@@ -6,10 +6,28 @@ kpenter
 kp0
 	pkill mplayer
 
-# 6music
+kp1
+	flock -o -n /tmp -c "mpg123 /root/soundboard/wtf.mp3"
+
+kp2
+	flock -o -n /tmp -c "mpg123 /root/soundboard/moan.mp3"
+
+kp3
+	flock -o -n /tmp -c "mpg123 /root/soundboard/neverheardofit.mp3"
+
+kp5
+	flock -o -n /tmp -c "mpg123 /root/soundboard/rpisoundboard.mp3"
+
+# 6music (requires internet)
 kp6
 	flock -o -n /tmp -c "mplayer 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_intl_lc_6music_p?s=1387079019&e=1387093419&h=7858d8db4e687f999422d058cae23681'"
 
-# Play MP3
-kp1
-	flock -o -n /tmp -c "mplayer /root/01.LOVE.mp3"
+kp7
+	flock -o -n /tmp -c "mpg123 /root/soundboard/sucks.mp3"
+
+kp8
+	flock -o -n /tmp -c "mpg123 /root/soundboard/burp.mp3"
+
+kp9
+	flock -o -n /tmp -c "mpg123 /root/soundboard/chickenrice.mp3"
+
